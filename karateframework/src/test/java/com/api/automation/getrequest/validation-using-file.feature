@@ -19,5 +19,7 @@ Feature: To validate the GET End point
 		And header Accept = 'application/xml'
 		When method get
 		Then status 200
-		* print response
+#		* print response
+		* print 'Actual Item:', karate.xmlPath(response, '/List/item')
+		* print 'Expected Item:', expectedXmlResponse
 		And match each response/List/item == expectedXmlResponse

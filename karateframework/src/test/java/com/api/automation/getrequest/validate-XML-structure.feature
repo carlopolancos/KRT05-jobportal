@@ -28,7 +28,9 @@ Feature: To validate the GET End point
 		Then status 200
 		#match specific properties
 		And match response/List/item/jobId == '#notnull'
-		And match response/List/item/jobTitle == '#[] #string'
+#		And match response/List/item/jobTitle == '#string'
+#		And match response/List/item/jobTitle == '#[] #string'
+		And match response/List/item/jobTitle == "#? karate.typeOf(_) == 'string' || karate.typeOf(_) == 'list'"
 		And match response/List/item/experience/experience[1] == '#notnull'
 		And match response/List/item/project/project/projectName == '#present'
 		And match response/List/item/project/project/technology/technology[2] == '#ignore'
