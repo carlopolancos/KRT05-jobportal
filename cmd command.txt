@@ -1,0 +1,5 @@
+java -jar -Dserver.port9897 jobportal-0.0.1-SNAPSHOT.jar
+
+cd /d D:\Karate-Test-Framework\KRT05-jobportal\testproject
+
+http://localhost:9191/swagger-ui.html
