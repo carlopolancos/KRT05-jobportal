@@ -1,22 +1,16 @@
-<List>
-  <item>
-    <jobId>1</jobId>
-    <jobTitle>Software Engg</jobTitle>
-    <jobDescription>To develop andriod application</jobDescription>
-    <experience>
-      <experience>Google</experience>
-      <experience>Apple</experience>
-      <experience>Mobile Iron</experience>
-    </experience>
-    <project>
-      <project>
-        <projectName>Movie App</projectName>
-        <technology>
-          <technology>Kotlin</technology>
-          <technology>SQL Lite</technology>
-          <technology>Gradle</technology>
-        </technology>
-      </project>
-    </project>
-  </item>
-</List>
+<item>
+	<jobId>#string</jobId>
+	<jobTitle>#string</jobTitle>
+	<jobDescription>#string</jobDescription>
+	<experience>
+		<experience>#present</experience>
+	</experience>
+	<project>
+		<project>
+			<projectName>#string</projectName>
+			<technology>
+				<technology>#present</technology>
+			</technology>
+	  </project>
+	</project>
+</item>

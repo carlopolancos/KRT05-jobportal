@@ -1,0 +1,29 @@
+<item>
+	<jobId>3</jobId>
+	<jobTitle>Development Engineer 3</jobTitle>
+	<jobDescription>To develop web application</jobDescription>
+	<experience>
+		<experience>Google</experience>
+		<experience>Apple</experience>
+		<experience>Mobile Iron</experience>
+		<experience>Pega</experience>
+		<experience>AWS</experience>
+		<experience>Oracle</experience>
+		<experience>IBM</experience>
+	</experience>
+	<project>
+		<project>
+			<projectName>Movie App</projectName>
+			<technology>
+				<technology>Kotlin</technology>
+				<technology>SQL Lite</technology>
+				<technology>Gradle</technology>
+				<technology>Playwright</technology>
+				<technology>Karate</technology>
+				<technology>Java</technology>
+				<technology>C#</technology>
+			</technology>
+		</project>
+	</project>
+</item>
+		

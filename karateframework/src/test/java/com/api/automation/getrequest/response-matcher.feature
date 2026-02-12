@@ -10,10 +10,9 @@ Feature: To validate the GET End point
 		When method get
 		Then status 200
 		* print response
-		And match response ==
+		And match response.[0] ==
 		"""
-		[
-		  {
+		{
 		    "jobId": 1,
 		    "jobTitle": "Software Engg",
 		    "jobDescription": "To develop andriod application",
@@ -33,7 +32,6 @@ Feature: To validate the GET End point
 		      }
 		    ]
 		  }
-		]
 		"""
 
 	Scenario: To get the data in XML format
@@ -42,11 +40,10 @@ Feature: To validate the GET End point
 		When method get
 		Then status 200
 		* print response
-		And match response ==
+		And match response/List/item[1] ==
 		"""
-		<List>
-		  <item>
-		    <jobId>1</jobId>
+		<item>
+			<jobId>1</jobId>
 		    <jobTitle>Software Engg</jobTitle>
 		    <jobDescription>To develop andriod application</jobDescription>
 		    <experience>
@@ -64,8 +61,7 @@ Feature: To validate the GET End point
 		        </technology>
 		      </project>
 		    </project>
-		  </item>
-		</List>
+		</item>
 		"""
 
 	Scenario: To get the data in JSON format and validate a specific property

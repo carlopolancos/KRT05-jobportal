@@ -1,22 +1,12 @@
-[
-  {
-    "jobId": 1,
-    "jobTitle": "Software Engg",
-    "jobDescription": "To develop andriod application",
-    "experience": [
-      "Google",
-      "Apple",
-      "Mobile Iron"
-    ],
+{
+    "jobId": "#number",
+    "jobTitle": "#string",
+    "jobDescription": "#string",
+    "experience": "#[] #string",
     "project": [
       {
-        "projectName": "Movie App",
-        "technology": [
-          "Kotlin",
-          "SQL Lite",
-          "Gradle"
-        ]
+        "projectName": "#string",
+        "technology": "#[] #string"
       }
     ]
   }
-]

@@ -12,7 +12,7 @@ Feature: To validate the GET End point
 		When method get
 		Then status 200
 		* print response
-		And match response == expectedJsonResponse
+		And match each response.[*] == expectedJsonResponse
 
 	Scenario: To get the data in XML format and validate from file
 		Given path 'normal/webapi/all'
@@ -20,4 +20,4 @@ Feature: To validate the GET End point
 		When method get
 		Then status 200
 		* print response
-		And match response == expectedXmlResponse
+		And match each response/List/item == expectedXmlResponse
