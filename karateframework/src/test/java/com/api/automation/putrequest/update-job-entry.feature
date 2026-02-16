@@ -27,3 +27,55 @@ Feature: To test the updation of Job entry in the test application
 		When method put
 		Then status 200
 		And match response == newJobBody
+		
+	Scenario: To update the Job Entry for existing job in JSON format by calling another feature file
+		#Create a new Job Entry
+		Given call read('classpath:com/api/automation/create-job-entry.feature')
+		
+		#Update entry
+		Given path 'normal/webapi/update'
+		* set newJobBody.jobTitle = 'Bagong titulo'
+		* set newJobBody.jobDescription = 'Bagong deskripsyon'
+		* set newJobBody.project[0].projectName = 'Bagong pangalan ng proyekto'
+		And request newJobBody
+		And headers { Accept: 'application/json', Content-Type: 'application/json' }
+		When method put
+		Then status 200
+		And match response == newJobBody
+		#Create a new Job Entry
+		Given path 'normal/webapi/add'
+		* def id = getRandomValue()
+		* set newJobBody.jobId = id
+		
+		And request newJobBody
+		And headers { Accept: 'application/json', Content-Type: 'application/json' }
+		When method post
+		Then status 201
+		
+		#Update entry
+		Given path 'normal/webapi/update'
+		* set newJobBody.jobTitle = 'Bagong titulo'
+		* set newJobBody.jobDescription = 'Bagong deskripsyon'
+		* set newJobBody.project[0].projectName = 'Bagong pangalan ng proyekto'
+		And request newJobBody
+		And headers { Accept: 'application/json', Content-Type: 'application/json' }
+		When method put
+		Then status 200
+		And match response == newJobBody
+		
+	Scenario: To update the Job Entry for existing job in JSON format by calling another feature file
+		#Create a new Job Entry
+		* def getRandomValue = function() { return Math.floor( (100)*Math.random() ); }
+		* def id = getRandomValue()
+		* def postRequest = call read('classpath:com/api/automation/create-job-entry-with-variables.feature') { _url: 'http://localhost:9191', _path: 'normal/webapi/add', _id: '#(id)' }
+		
+		#Update entry
+		Given path 'normal/webapi/update'
+		* set newJobBody.jobTitle = 'Bagong titulo'
+		* set newJobBody.jobDescription = 'Bagong deskripsyon'
+		* set newJobBody.project[0].projectName = 'Bagong pangalan ng proyekto'
+		And request newJobBody
+		And headers { Accept: 'application/json', Content-Type: 'application/json' }
+		When method put
+		Then status 200
+		And match response == newJobBody
