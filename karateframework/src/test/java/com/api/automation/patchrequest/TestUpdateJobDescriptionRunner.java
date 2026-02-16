@@ -1,14 +1,14 @@
-package com.api.automation.getrequest.queryparameters;
+package com.api.automation.patchrequest;
 
 import com.intuit.karate.junit5.Karate;
 import com.intuit.karate.junit5.Karate.Test;
 
-public class TestJavaScriptRunner {
+public class TestUpdateJobDescriptionRunner {
 	
 	@Test
 	public Karate runTest() {
 //		return Karate.run("getRequest", "responseMatcher").relativeTo(getClass());
-		return Karate.run("query-parameter").relativeTo(getClass());
+		return Karate.run("update-job-description").relativeTo(getClass());
 	}
 	
 //	@Test
