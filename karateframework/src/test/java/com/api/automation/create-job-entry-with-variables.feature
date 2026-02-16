@@ -13,3 +13,5 @@ Feature: To create the job entry in the test application
 		And headers { Accept: 'application/json', Content-Type: 'application/json' }
 		When method post
 		Then status 201
+		* def responseJobId = response.jobId
+		* def responseJobTitle = response.jobTitle
