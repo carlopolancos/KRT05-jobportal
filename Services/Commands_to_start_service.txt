@@ -1,0 +1,8 @@
+Open the cmd and navigate to the folder (via cmd) which have the jar files. These jar files are build using jdk 11.0.7. You must have the same jdk to run them
+
+MockServer API - https://mock-server.com/versions/5.3.0/apidocs/index.html
+
+1. Product Service (default port 9092) = java -jar product-0.0.1-SNAPSHOT.jar
+2. Review Service (default port 9091) = java -jar review-0.0.1-SNAPSHOT.jar
+3. ProductComposite Service = java -jar productcomposite-0.0.1-SNAPSHOT.jar
+4. With Mockserver (running on port 9092) = java -jar productcomposite-0.0.1-SNAPSHOT.jar --review.service.url=http://localhost:9092 --product.service.url=http://localhost:9092
