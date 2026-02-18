@@ -87,6 +87,12 @@ pipeline {
 
 }
 
+Plugins
+-Pipeline Utility Steps
+-Email Extension
+
+//from here NOT IMPLEMENTED
+
 Add Item
 -Multibranch Pipeline, KarateAPIAutomation
 -Add branch source, GitHub, paste link from code, validate
@@ -94,3 +100,11 @@ Add Item
 -Orphaned Item Strategy, Discard old builds
 --Days to keep builds -> 15
 --Max # of builds to keep -> 10
+
+-Settings, Configure System, Email Notification, SMTP server -> localhost
+--Advanced, user SMTP authentication, input username password and port, add reply-to address
+--Check test configuration by sending test e-mail, add test email (different from username), click test configuration
+
+add to always: 
+	zip zipFile: 'target/test-result.zip', archive: true, dir: 'target/surefire-reports', overwrite: true
+	emailext subject: "Job '${env.JOB_NAME} = ${env.BUILD_NUMBER} '", body: 'Refer to the attachment', attachmentPattern: 'target/test-result.zip', to: 'sample@email.com'
