@@ -21,7 +21,13 @@
             <artifactId>karate-junit5</artifactId>
             <version>${karate.version}</version>
             <scope>test</scope>
-        </dependency>		
+        </dependency>
+        
+        <dependency>
+		    <groupId>net.masterthought</groupId>
+		    <artifactId>cucumber-reporting</artifactId>
+		    <version>5.10.2</version>
+		</dependency>		
     </dependencies>
 
     <build>
@@ -57,6 +63,7 @@
                 <configuration>
                 	<includes>
                 		<include>**/ParallelBuilderWithTags.java</include>
+                		<include>**/ParallelBuilderWithCucumberReport.java</include>
                 	</includes>
                 	<systemProperties>
                 		<location>com/api/automation</location>

@@ -30,7 +30,8 @@ public class ParallelBuilder {
 	@Test // Standard JUnit 5 annotation
     void testParallel() {
         Results results = Runner.path("classpath:com/api/automation")
-                .tags("@confidence, @smoke, @regression")
+	        		.tags("@confidence, @smoke, @regression") //Comma = OR
+//    			.tags("@confidence", "@smoke", "@regression") // Separate args = AND
                 .parallel(5);
         assertEquals(0, results.getFailCount(), results.getErrorMessages());
     }
