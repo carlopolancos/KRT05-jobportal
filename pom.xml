@@ -27,6 +27,12 @@
 		    <groupId>net.masterthought</groupId>
 		    <artifactId>cucumber-reporting</artifactId>
 		    <version>5.10.2</version>
+		</dependency>
+		
+		<dependency>
+		    <groupId>com.aventstack</groupId>
+		    <artifactId>extentreports</artifactId>
+		    <version>5.1.2</version>
 		</dependency>		
     </dependencies>
 
@@ -62,8 +68,9 @@
                 </configuration> -->
                 <configuration>
 	                	<includes>
-<!--	                		<include>**/ParallelBuilderWithTags.java</include>-->
+	                		<include>**/ParallelBuilderWithTags.java</include>
 	                		<include>**/ParallelBuilderWithCucumberReport.java</include>
+	                		<include>**/ParallelBuilderWithExtentReport.java</include>
 	                	</includes>
 	                	<systemProperties>
 	                		<location>com/api/automation</location>

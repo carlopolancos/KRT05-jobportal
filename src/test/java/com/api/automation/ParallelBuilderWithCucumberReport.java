@@ -24,6 +24,7 @@ public class ParallelBuilderWithCucumberReport {
         Results results = Runner.path("classpath:com/api/automation")
 	        		.tags("@confidence, @smoke, @regression") //Comma = OR
 //				.tags("@confidence", "@smoke", "@regression") // Separate args = AND
+	        		.reportDir("target/karate-reports/cucumber-run")
                 .outputCucumberJson(true)
                 .parallel(5);
         generateCucumberReport(results.getReportDir());
