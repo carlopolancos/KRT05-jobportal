@@ -31,13 +31,15 @@ Plugins
 -Cucumber Reports
 
 Add Item
--Pipeline Type, any name
+-Pipeline Type, RestSharpAutomation
 -Configure, General, Discard old builds
 --Days to keep builds -> 15
 --Max # of builds to keep -> 10
 -Pipeline Script:
 pipeline {
     agent any
+
+    parameters { choice(name: 'Environment', choices:['staging', 'preprod', 'prod'], description: 'Profile needs to be used while executing test') }
     
     stages {
         stage ('Clean WorkSpace Directory'){
@@ -84,3 +86,11 @@ pipeline {
     }
 
 }
+
+Add Item
+-Multibranch Pipeline, KarateAPIAutomation
+-Add branch source, GitHub, paste link from code, validate
+-Build Configuration, Mode -> by Jenkinsfile, Script path -> Jenkinsfile
+-Orphaned Item Strategy, Discard old builds
+--Days to keep builds -> 15
+--Max # of builds to keep -> 10
