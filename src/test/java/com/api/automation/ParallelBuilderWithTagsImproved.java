@@ -43,6 +43,7 @@ public class ParallelBuilderWithTagsImproved {
     void testParallel() {
         Results results = Runner.path(getLocation().toArray(new String[0]))
                 .tags(getTags().toArray(new String[0]))
+                .outputCucumberJson(true)
                 .parallel(5);
         assertEquals(0, results.getFailCount(), results.getErrorMessages());
     }

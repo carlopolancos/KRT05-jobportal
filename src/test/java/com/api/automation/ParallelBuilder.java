@@ -32,6 +32,7 @@ public class ParallelBuilder {
         Results results = Runner.path("classpath:com/api/automation")
 	        		.tags("@confidence, @smoke, @regression") //Comma = OR
 //    			.tags("@confidence", "@smoke", "@regression") // Separate args = AND
+                .outputCucumberJson(true)
                 .parallel(5);
         assertEquals(0, results.getFailCount(), results.getErrorMessages());
     }

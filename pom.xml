@@ -62,7 +62,7 @@
                 </configuration> -->
                 <configuration>
 	                	<includes>
-	                		<include>**/ParallelBuilderWithTags.java</include>
+<!--	                		<include>**/ParallelBuilderWithTags.java</include>-->
 	                		<include>**/ParallelBuilderWithCucumberReport.java</include>
 	                	</includes>
 	                	<systemProperties>
