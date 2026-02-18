@@ -2,7 +2,7 @@ Feature: Validate the JSON schema
 	To validate the JSON schema for POST /normal/webapi/add
 	
 	Background: Create and initialize base URL
-		Given url 'http://localhost:9191'
+		Given url 'http://localhost:9897'
 		* def body = read("classpath:com/api/automation/job-entry.json")
 		* def expectedResponse = read("classpath:com/api/automation/json-response.json")
 		

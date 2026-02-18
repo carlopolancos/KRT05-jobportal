@@ -15,7 +15,7 @@ function auth(cred) {
     return 'Basic ' + encodedStr;    
 }
 
-/*function auth(cred) {
+/*function auth(cred) { 
     var temp = cred.username + ':' + cred.password;
     var Base64 = karate.toBase64(temp);
     return 'Basic ' + Base64;

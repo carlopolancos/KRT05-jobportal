@@ -2,7 +2,7 @@ Feature: To validate the GET End point
 	To validate the get end point response
 	
 	Background: Setup the Base path
-		Given url 'http://localhost:9191'
+		Given url 'http://localhost:9897'
 		* def expectedJsonResponse = read('classpath:com/api/automation/json-response.json')
 		* def expectedXmlResponse = read('classpath:com/api/automation/xml-response.xml')
 

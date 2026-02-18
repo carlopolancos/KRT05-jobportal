@@ -1,7 +1,7 @@
 Feature: To upload the file using Karate Framework
 	
 	Background: Create and initialize base URL
-		Given url 'http://localhost:9191'
+		Given url 'http://localhost:9897'
 		
 	Scenario: To upload in the test application
 		Given path 'normal/webapi/upload'

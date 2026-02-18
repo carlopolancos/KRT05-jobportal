@@ -7,7 +7,7 @@ public class TestSecureGetRunner {
 	
 	@Test
 	public Karate runTest() {
-		return Karate.run("secure-get-request").relativeTo(getClass());
+		return Karate.run().relativeTo(getClass());
 	}
 	
 }

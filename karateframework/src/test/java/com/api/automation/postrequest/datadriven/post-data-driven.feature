@@ -1,7 +1,7 @@
 Feature: To create job in the test application
 	
 	Background: Create and initialize base URL
-		Given url 'http://localhost:9191'
+		Given url 'http://localhost:9897'
 		* def newJsonRequestBody = read('classpath:com/api/automation/job-entry.json')
 		
 	Scenario Outline: To create job description in the test application <method>
@@ -11,9 +11,9 @@ Feature: To create job in the test application
 		Then print <status>
 		Examples:
 		| url 					| path 				 	| method		| status		|
-		| http://localhost:9191 	| normal/webapi/all/ 	| get 		| 200 		|
-		| http://localhost:9191 	| normal/webapi/add/ 	| post 		| 201 		|
-		| http://localhost:9191 	| normal/webapi/add/ 	| put 		| 201 		|
+		| http://localhost:9897 	| normal/webapi/all/ 	| get 		| 200 		|
+		| http://localhost:9897 	| normal/webapi/add/ 	| post 		| 201 		|
+		| http://localhost:9897 	| normal/webapi/add/ 	| put 		| 201 		|
 	
 	Scenario Outline: Data Driven for the job description entry using file reader and JSON modifer <jobId>
 		Given path 'normal/webapi/add'

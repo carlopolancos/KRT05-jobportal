@@ -2,7 +2,7 @@ Feature: To test the GET end point which is secured with Basic Auth
 	GET secure/webapi/all
 	
 	Background: Setup the Base path
-		Given url 'http://localhost:9191'
+		Given url 'http://localhost:9897'
 		* def expectedJsonResponse = read('classpath:com/api/automation/json-response.json')
 
 	Scenario: To access the GET end point with basic auth using valid credentials

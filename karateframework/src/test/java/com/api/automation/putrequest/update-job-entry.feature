@@ -2,7 +2,7 @@ Feature: To test the updation of Job entry in the test application
 	Test the end point PUT /normal/webapi/update
 	
 	Background: Create and initialize base URL
-		Given url 'http://localhost:9191'
+		Given url 'http://localhost:9897'
 		* def newJobBody = read('classpath:com/api/automation/job-entry.json')
 		* def getRandomValue = function() { return Math.floor( (100)*Math.random() ); }
 		
@@ -67,7 +67,7 @@ Feature: To test the updation of Job entry in the test application
 		#Create a new Job Entry
 		* def getRandomValue = function() { return Math.floor( (100)*Math.random() ); }
 		* def id = getRandomValue()
-		* def postRequest = call read('classpath:com/api/automation/create-job-entry-with-variables.feature') { _url: 'http://localhost:9191', _path: 'normal/webapi/add', _id: '#(id)' }
+		* def postRequest = call read('classpath:com/api/automation/create-job-entry-with-variables.feature') { _url: 'http://localhost:9897', _path: 'normal/webapi/add', _id: '#(id)' }
 		
 		#Update entry
 		Given path 'normal/webapi/update'

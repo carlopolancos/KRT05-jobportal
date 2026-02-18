@@ -2,7 +2,7 @@ Feature: To test the delete end point
 	DELETE normal/webapi/remove/{id}
 	
 	Scenario: To update the job description for newly added job entry
-		* def baseUrl = 'http://localhost:9191'
+		* def baseUrl = 'http://localhost:9897'
 		
 		* def getRandomValue = function() { return Math.floor( (100)*Math.random() ); }
 		* def randomId = getRandomValue()
@@ -25,7 +25,7 @@ Feature: To test the delete end point
 		And match response.message == 'Failed to find job with id='+randomId+', jobTitle='+fixedJobTitle
 	
 	Scenario: To update the job description for newly added job entry and delete job entry twice
-		* def baseUrl = 'http://localhost:9191'
+		* def baseUrl = 'http://localhost:9897'
 		
 		* def getRandomValue = function() { return Math.floor( (100)*Math.random() ); }
 		* def randomId = getRandomValue()
@@ -46,7 +46,7 @@ Feature: To test the delete end point
 		And response.message == 'Entry with id = '+randomId+' not found'
 	
 	Scenario: To update the job description for newly added job entry and delete job entry twice
-		* def baseUrl = 'http://localhost:9191'
+		* def baseUrl = 'http://localhost:9897'
 		
 		* def getRandomValue = function() { return Math.floor( (100)*Math.random() ); }
 		* def randomId = getRandomValue()

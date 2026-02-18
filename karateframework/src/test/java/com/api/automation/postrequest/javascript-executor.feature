@@ -1,7 +1,7 @@
 Feature: To exectue the Java Script Function
 	
 	Background: Create and initialize base URL
-		Given url 'http://localhost:9191'
+		Given url 'http://localhost:9897'
 		
 	Scenario: Execute Java Script Function with and without parameter
 		* def getIntValue = function() { return 10; }

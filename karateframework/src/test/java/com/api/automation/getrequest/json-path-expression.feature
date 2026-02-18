@@ -1,7 +1,7 @@
 Feature: To use the JSON path expresison
 	
 	Background: Setup the Base path
-		Given url 'http://localhost:9191'
+		Given url 'http://localhost:9897'
 		
 	Scenario: To the the value of property using json path expression
 		Given path 'normal/webapi/all'

@@ -2,7 +2,7 @@ Feature: To test the get end point of the application
 	To test different get end point with different data format supported by the application
 	
 	Background: Setup the Base path
-		Given url 'http://localhost:9191'
+		Given url 'http://localhost:9897'
 		* print '==========This is background keyword=========='
 
 	Scenario: To get all the data from application in JSON format

@@ -3,7 +3,7 @@ Feature: To create the Job entry in the application
 	Use POST /normal/webapi/add to create job entry in the application
 	
 	Background: Setup the Base path
-		Given url 'http://localhost:9191'
+		Given url 'http://localhost:9897'
 		* def newJsonRequestBody = read('classpath:com/api/automation/job-entry.json')
 		* def newXmlRequestBody = read('classpath:com/api/automation/xml-entry.xml')
 		
