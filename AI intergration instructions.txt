@@ -1,0 +1,6 @@
+git clone https://github.com/vspaswin/karate-mcp-server.git
+cd karate-mcp-server
+npm install
+npm run build
+
+CANT INTEGRATE CLAUDE!
