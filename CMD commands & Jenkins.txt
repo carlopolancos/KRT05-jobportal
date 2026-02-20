@@ -1,11 +1,13 @@
 cd /d D:\Karate-Test-Framework\KRT05-jobportal
 cd /d D:\Karate-Test-Framework\KRT05-jobportal\Services
+cd C:\Users\polan\Downloads\KRT05-jobportal\Services
 
 java -jar -Dserver.port=9897 jobportal-0.0.1-SNAPSHOT.jar
 java -jar -Dserver.port=9898 jobapplication-0.0.1-SNAPSHOT.jar
 java -jar -Dserver.port=9092 product-0.0.1-SNAPSHOT.jar
 java -jar -Dserver.port=9091 review-0.0.1-SNAPSHOT.jar
-java -jar -Dserver.port=9090 productcomposite-0.0.1-SNAPSHOT.jar --review.service.url=http://localhost:9092 --product.service.url=http://localhost:9092
+java -jar -Dserver.port=9090 productcomposite-0.0.1-SNAPSHOT.jar --review.service.url=http://localhost:9091 --product.service.url=http://localhost:9092 //FOR ACTUAL SERVER
+java -jar -Dserver.port=9090 productcomposite-0.0.1-SNAPSHOT.jar --review.service.url=http://localhost:9092 --product.service.url=http://localhost:9092 //FOR MOCK SERVER
 
 http://localhost:9897/swagger-ui.html
 http://localhost:9898/swagger-ui.html
