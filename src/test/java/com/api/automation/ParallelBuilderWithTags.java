@@ -38,13 +38,14 @@ public class ParallelBuilderWithTags {
     void testParallel() {
         Results results = Runner.path(getLocation().toArray(new String[0]))
                 .tags(getTags().toArray(new String[0]))
+				.reportDir("target/karate-reports/tags-run")
                 .outputCucumberJson(true)
                 .parallel(5);
         assertEquals(0, results.getFailCount(), results.getErrorMessages());
     }
 	
 	private List<String> getTags() {
-		String aTags = System.getProperty("tags", "@confidence, @smoke, @regression");
+		String aTags = System.getProperty("tags", "@confidence,@smoke,@regression");
 		List<String> aTagList = Arrays.asList(aTags);
 		return aTagList;
 	}

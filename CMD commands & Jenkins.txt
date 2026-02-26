@@ -19,9 +19,9 @@ mvn test
 mvn help:all-profiles
 mvn help:active-profiles
 
-mvn -P staging test
-mvn -P preprod test
-mvn -P prod test
+mvn clean -P staging test
+mvn clean -P preprod test
+mvn clean -P prod test
 
 ----------------------------------------------------------------------------
 

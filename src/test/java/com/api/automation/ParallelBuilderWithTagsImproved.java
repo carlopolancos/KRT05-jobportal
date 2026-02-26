@@ -13,7 +13,8 @@ import com.intuit.karate.Runner;
 import com.intuit.karate.junit5.Karate;
 
 public class ParallelBuilderWithTagsImproved {
-	
+
+	//THIS MAKES AN AND (&&) TAG CONFIGURATION!
 	//open this file's run configuration to edit tags
 	
 	/* Available tags:
@@ -43,13 +44,14 @@ public class ParallelBuilderWithTagsImproved {
     void testParallel() {
         Results results = Runner.path(getLocation().toArray(new String[0]))
                 .tags(getTags().toArray(new String[0]))
+				.reportDir("target/karate-reports/tags-run")
                 .outputCucumberJson(true)
                 .parallel(5);
         assertEquals(0, results.getFailCount(), results.getErrorMessages());
     }
 	
 	private List<String> getTags() {
-		String aTags = System.getProperty("tags", "@confidence, @smoke, @regression");
+		String aTags = System.getProperty("tags", "@confidence,@smoke,@regression");
 		List<String> aTagList = Collections.emptyList();
 		if (aTags.contains(DELIMITER)) {
 			String tagArray[] = aTags.split(DELIMITER);

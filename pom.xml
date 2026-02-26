@@ -75,15 +75,16 @@
                 </configuration> -->
                 <configuration>
 	                	<includes>
-	                		<include>**/ParallelBuilderWithTags.java</include>
-	                		<include>**/ParallelBuilderWithCucumberReport.java</include>
-	                		<include>**/ParallelBuilderWithExtentReport.java</include>
+	                		<include>**/ParallelBuilderWithTagsSuper.java</include>
+<!--	                		<include>**/ParallelBuilderWithTags.java</include>-->
+<!--	                		<include>**/ParallelBuilderWithCucumberReport.java</include>-->
+<!--	                		<include>**/ParallelBuilderWithExtentReport.java</include>-->
 	                	</includes>
-	                	<systemProperties>
+	                	<systemPropertyVariables>
 	                		<location>com/api/automation</location>
-	                		<tags>@regression</tags>
+	                		<tags>@confidence,@smoke,@regression</tags>
 	                		<karate.env>${karate.profile}</karate.env>
-	                	</systemProperties>
+	                	</systemPropertyVariables>
 	                	<rerunFailingTestsCount>2</rerunFailingTestsCount>
                     <argLine>-Dfile.encoding=UTF-8</argLine>
                 </configuration>
